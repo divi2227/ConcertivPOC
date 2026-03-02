@@ -1,0 +1,13 @@
+.proposal-preview { display: flex; flex-direction: column; height: calc(100vh - 120px); }
+
+.preview-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0; margin-bottom: 16px; border-bottom: 1px solid var(--border);
+}
+
+.preview-content {
+  flex: 1; background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; overflow: auto; padding: 0;
+}
+
+.html-preview-frame { border-radius: 8px; }

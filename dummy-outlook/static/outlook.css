@@ -1,0 +1,270 @@
+/* Dummy Outlook — POC Demo Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    background: #F3F2F1;
+    color: #323130;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.outlook-header {
+    background: #0078D4;
+    color: white;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.outlook-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.outlook-header .brand svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.outlook-header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.outlook-header .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Main Layout */
+.outlook-main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: white;
+    border-right: 1px solid #EDEBE9;
+    padding: 12px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #323130;
+    transition: background 0.1s;
+}
+
+.sidebar-item:hover {
+    background: #F3F2F1;
+}
+
+.sidebar-item.active {
+    background: #EDEBE9;
+    font-weight: 600;
+}
+
+.sidebar-item .folder-icon {
+    margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-item .folder-name {
+    flex: 1;
+}
+
+.sidebar-item .badge {
+    background: #0078D4;
+    color: white;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Email List */
+.email-list {
+    flex: 1;
+    overflow-y: auto;
+    background: white;
+}
+
+.email-list-header {
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #323130;
+    border-bottom: 1px solid #EDEBE9;
+    background: #FAFAFA;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.email-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    border-bottom: 1px solid #F3F2F1;
+    cursor: pointer;
+    transition: background 0.1s;
+    gap: 12px;
+}
+
+.email-row:hover {
+    background: #F3F2F1;
+}
+
+.email-row.unread {
+    background: #F0F6FF;
+}
+
+.email-row.unread:hover {
+    background: #E5EFFA;
+}
+
+.email-row.unread .email-sender-name {
+    font-weight: 700;
+    color: #0078D4;
+}
+
+/* Sender initials */
+.sender-initials {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.sender-initials.color-0 { background: #0078D4; }
+.sender-initials.color-1 { background: #107C10; }
+.sender-initials.color-2 { background: #5C2D91; }
+.sender-initials.color-3 { background: #D83B01; }
+.sender-initials.color-4 { background: #008272; }
+.sender-initials.color-5 { background: #B4009E; }
+.sender-initials.color-6 { background: #E3008C; }
+
+/* Email content */
+.email-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.email-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.email-sender-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #323130;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.email-date {
+    font-size: 11px;
+    color: #A19F9D;
+    white-space: nowrap;
+    margin-left: 12px;
+}
+
+.email-subject {
+    font-size: 13px;
+    color: #323130;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.email-preview {
+    font-size: 12px;
+    color: #A19F9D;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Negotiation flag */
+.negotiation-flag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #FFF4CE;
+    color: #835C00;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Footer */
+.outlook-footer {
+    background: #F3F2F1;
+    border-top: 1px solid #EDEBE9;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: #A19F9D;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Demo banner */
+.demo-banner {
+    background: #FFF4CE;
+    color: #835C00;
+    text-align: center;
+    padding: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #F0E6B8;
+}

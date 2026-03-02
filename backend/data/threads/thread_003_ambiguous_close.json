@@ -1,0 +1,92 @@
+{
+  "conversation_id": "thread_003",
+  "subject": "FactSet Terminal Access - Zenith Capital Partners",
+  "participants": [
+    {"name": "James Liu", "email": "james.liu@zenithcap.com", "role": "client"},
+    {"name": "Amanda Foster", "email": "amanda.foster@factset.com", "role": "vendor"},
+    {"name": "Marcus Webb", "email": "marcus.webb@concertiv.com", "role": "concertiv"}
+  ],
+  "messages": [
+    {
+      "message_id": "msg-001",
+      "from": {"name": "James Liu", "email": "james.liu@zenithcap.com"},
+      "to": [{"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-10T08:30:00Z",
+      "subject": "FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Marcus,\n\nWe're exploring FactSet as our primary research and analytics platform. We'd need access for roughly 10 to 12 users depending on how our Q2 hiring goes. Can you get us a quote? We've used Bloomberg in the past but are looking at alternatives for cost reasons.\n\nThanks,\nJames Liu\nManaging Partner\nZenith Capital Partners"
+    },
+    {
+      "message_id": "msg-002",
+      "from": {"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"},
+      "to": [{"name": "Amanda Foster", "email": "amanda.foster@factset.com"}],
+      "cc": [{"name": "James Liu", "email": "james.liu@zenithcap.com"}],
+      "timestamp": "2025-02-10T13:45:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Amanda,\n\nI'm reaching out on behalf of Zenith Capital Partners, who are evaluating FactSet for their research team. They're looking at 10-12 user licenses and are coming from a Bloomberg environment, so they'll need full terminal access including screening, analytics, and portfolio tools. Could you put together a proposal?\n\nBest,\nMarcus Webb\nClient Services\nConcertiv"
+    },
+    {
+      "message_id": "msg-003",
+      "from": {"name": "Amanda Foster", "email": "amanda.foster@factset.com"},
+      "to": [{"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}],
+      "cc": [{"name": "James Liu", "email": "james.liu@zenithcap.com"}],
+      "timestamp": "2025-02-11T10:00:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Marcus,\n\nThanks for the introduction. For Zenith Capital, we'd recommend our full workstation package at $18,000 per seat annually for 12 seats on a 3-year term. This includes our complete analytics suite, real-time data, screening tools, and portfolio analytics — everything they'd need coming from a Bloomberg environment. Volume pricing kicks in at 12+ seats, which is why I'd recommend that tier.\n\nHappy to arrange a walkthrough for James and his team.\n\nBest regards,\nAmanda Foster\nAccount Executive\nFactSet"
+    },
+    {
+      "message_id": "msg-004",
+      "from": {"name": "James Liu", "email": "james.liu@zenithcap.com"},
+      "to": [{"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}, {"name": "Amanda Foster", "email": "amanda.foster@factset.com"}],
+      "cc": [],
+      "timestamp": "2025-02-12T09:20:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Amanda, Marcus,\n\nThanks for the proposal. The $18,000 per seat is higher than we were anticipating — our budget ceiling is around $15,000 per seat. Also, we may only need 10 seats initially rather than 12. We're still finalizing headcount for our new analyst class starting in Q2 so the exact number is a bit fluid. Is there flexibility on both price and the seat minimum?\n\nThanks,\nJames"
+    },
+    {
+      "message_id": "msg-005",
+      "from": {"name": "Amanda Foster", "email": "amanda.foster@factset.com"},
+      "to": [{"name": "James Liu", "email": "james.liu@zenithcap.com"}, {"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-13T11:15:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi James,\n\nI understand the budget considerations. We can offer $16,500 per seat with a minimum of 10 seats on a 2-year commitment. This removes the 3-year lock-in and gives you a lower entry point on seats. The full workstation feature set remains the same. Let me know if this is workable for your team.\n\nBest,\nAmanda"
+    },
+    {
+      "message_id": "msg-006",
+      "from": {"name": "James Liu", "email": "james.liu@zenithcap.com"},
+      "to": [{"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}],
+      "cc": [{"name": "Amanda Foster", "email": "amanda.foster@factset.com"}],
+      "timestamp": "2025-02-17T08:50:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Marcus,\n\nThanks for staying on top of this. The revised terms are closer to what we need, but I have to check with our team on the exact seat count before committing. We have a few hires in the pipeline that could push us to 12, but nothing confirmed yet. Let me circle back once I have more clarity — hopefully by end of next week.\n\nBest,\nJames"
+    },
+    {
+      "message_id": "msg-007",
+      "from": {"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"},
+      "to": [{"name": "James Liu", "email": "james.liu@zenithcap.com"}],
+      "cc": [{"name": "Amanda Foster", "email": "amanda.foster@factset.com"}],
+      "timestamp": "2025-02-20T10:30:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi James,\n\nJust following up — any update on the seat count from your team? Amanda's offer at $16,500 per seat with a 10-seat minimum is still on the table. Want to make sure we keep momentum on this so we can target an April deployment if you decide to move forward.\n\nBest,\nMarcus"
+    },
+    {
+      "message_id": "msg-008",
+      "from": {"name": "James Liu", "email": "james.liu@zenithcap.com"},
+      "to": [{"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}, {"name": "Amanda Foster", "email": "amanda.foster@factset.com"}],
+      "cc": [],
+      "timestamp": "2025-02-21T14:00:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi Marcus, Amanda,\n\nSorry for the delay. We're thinking 10 to 12 seats — it really depends on how Q2 hiring shakes out. Our two senior analyst offers are out but not yet accepted. Realistically, can we start with 10 seats and add more later at the same per-seat rate if our headcount grows? That would give us the flexibility we need without overcommitting upfront.\n\nThanks,\nJames"
+    },
+    {
+      "message_id": "msg-009",
+      "from": {"name": "Amanda Foster", "email": "amanda.foster@factset.com"},
+      "to": [{"name": "James Liu", "email": "james.liu@zenithcap.com"}, {"name": "Marcus Webb", "email": "marcus.webb@concertiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-24T09:45:00Z",
+      "subject": "Re: FactSet Terminal Access - Zenith Capital Partners",
+      "body": "Hi James,\n\nAbsolutely — we can structure this as a flex arrangement. You'd start with 10 seats and have the option to add up to 5 additional seats during the contract term at the same per-seat rate. No penalty for staying at 10.\n\nLet me draft up an implementation timeline assuming 10 seats with an April 1 target go-live. We'd need about 3 weeks for provisioning, user setup, and training. I'll have our onboarding team put together a deployment plan and share it with Marcus by end of week.\n\nLooking forward to getting this moving.\n\nBest,\nAmanda Foster\nAccount Executive\nFactSet"
+    }
+  ]
+}

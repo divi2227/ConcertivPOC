@@ -1,0 +1,121 @@
+.proposal-review { display: flex; flex-direction: column; height: calc(100vh - 120px); }
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.review-header-left { display: flex; align-items: center; gap: 16px; }
+.review-header-right { display: flex; align-items: center; gap: 8px; }
+.acceptance-text { color: var(--text-secondary); font-size: 13px; font-style: italic; }
+
+.review-panels { display: flex; gap: 20px; flex: 1; overflow: hidden; }
+.panel-left {
+  width: 40%; overflow-y: auto; background: var(--white);
+  border: 1px solid var(--border); border-radius: 8px; padding: 16px;
+}
+.panel-right {
+  width: 60%; overflow-y: auto; background: var(--white);
+  border: 1px solid var(--border); border-radius: 8px; padding: 16px;
+}
+
+.thread-viewer h3, .extraction-editor h3 {
+  font-size: 13px; letter-spacing: 1px; color: var(--text-secondary);
+  text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.message-card {
+  background: var(--light-bg); border-radius: 6px; padding: 12px;
+  margin-bottom: 12px; border-left: 3px solid var(--navy);
+}
+.msg-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.msg-id { font-family: monospace; font-size: 12px; color: var(--text-secondary); }
+.msg-from { font-weight: 600; font-size: 14px; }
+.msg-meta { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+.msg-body { font-size: 14px; line-height: 1.5; white-space: pre-wrap; }
+
+.extracted-highlight {
+  background-color: #fff176;
+  border-radius: 2px;
+  padding: 0 2px;
+  cursor: help;
+  border-bottom: 2px solid #f9a825;
+}
+.extracted-highlight:hover {
+  background-color: #ffee58;
+}
+
+.highlight-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  background: #fffde7;
+  border: 1px solid #fff176;
+  border-radius: 4px;
+}
+.highlight-legend-icon {
+  color: #f9a825;
+  font-size: 10px;
+}
+
+.editor-section {
+  margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.editor-section h4 {
+  font-size: 13px; letter-spacing: 1px; color: var(--navy);
+  margin-bottom: 12px; font-weight: 700;
+}
+
+.editable-field {
+  display: flex; align-items: center; margin-bottom: 8px;
+}
+.editable-field label {
+  width: 120px; font-size: 13px; color: var(--text-secondary); flex-shrink: 0;
+}
+.field-input {
+  flex: 1; display: flex; align-items: center; gap: 8px;
+}
+.field-input input {
+  flex: 1; padding: 6px 10px; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 14px; background: var(--light-bg);
+}
+.field-input input:focus { outline: none; border-color: var(--navy); background: var(--white); }
+.edit-icon { color: var(--text-secondary); font-size: 14px; cursor: pointer; }
+.warning-icon { color: var(--warning); font-size: 16px; }
+
+.price-history { margin-top: 12px; }
+.price-history h5 { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+.price-history table { width: 100%; font-size: 13px; border-collapse: collapse; }
+.price-history th {
+  text-align: left; padding: 6px 8px; background: var(--navy);
+  color: var(--white); font-size: 12px;
+}
+.price-history td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.price-history tr:nth-child(even) td { background: var(--light-bg); }
+
+.conditions-list, .ambiguities-list {
+  list-style: disc; padding-left: 20px; font-size: 14px; line-height: 1.8;
+}
+
+.editor-section.ambiguities {
+  background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px;
+  padding: 16px; border-bottom: none;
+}
+.editor-section.ambiguities h4 { color: #856404; }
+.ambiguities-list li { color: #856404; }
+
+.action-bar {
+  display: flex; justify-content: space-between; padding: 16px 0;
+  border-top: 1px solid var(--border); margin-top: 16px;
+}
+
+.loading { text-align: center; padding: 60px; color: var(--text-secondary); font-size: 18px; }

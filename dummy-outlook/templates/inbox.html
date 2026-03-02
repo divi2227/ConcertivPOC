@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook - John Doe - Concertiv</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='outlook.css') }}">
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        POC Demo Environment &mdash; Simulated Outlook Mailbox
+    </div>
+
+    <!-- Header -->
+    <div class="outlook-header">
+        <div class="brand">
+            <svg viewBox="0 0 24 24"><path d="M24 7.387v10.478c0 .23-.08.424-.238.576-.16.154-.352.23-.578.23h-8.26v-6.1L16.337 14l1.414-1.413-1.413-1.414L14.924 12.5V6.1h8.26c.226 0 .418.08.578.238.158.16.238.352.238.578v.47zM13.5 6.1v12.572H0V3.3L6.75 0 13.5 3.3V6.1zm-2.25 3.6c0-.827-.293-1.53-.878-2.115S9.077 6.75 8.25 6.75c-.827 0-1.53.293-2.115.878S5.25 8.873 5.25 9.7c0 .827.293 1.53.878 2.115s1.288.878 2.115.878c.827 0 1.53-.293 2.115-.878s.878-1.288.878-2.115zm8.25.578V8.523l-4.577 3.45L19.5 10.278z"/></svg>
+            <span>Outlook</span>
+        </div>
+        <div class="user-info">
+            <span>John Doe &middot; john.doe@concertiv.com</span>
+            <div class="user-avatar">JD</div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="outlook-main">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item active">
+                <span class="folder-icon">&#128229;</span>
+                <span class="folder-name">Inbox</span>
+                <span class="badge">{{ emails | length }}</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="folder-icon">&#128228;</span>
+                <span class="folder-name">Sent Items</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="folder-icon">&#128221;</span>
+                <span class="folder-name">Drafts</span>
+                <span class="badge" style="background:#A19F9D;">2</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="folder-icon">&#128198;</span>
+                <span class="folder-name">Negotiations</span>
+                <span class="badge" style="background:#D83B01;">3</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="folder-icon">&#128465;</span>
+                <span class="folder-name">Deleted Items</span>
+            </div>
+            <div class="sidebar-item">
+                <span class="folder-icon">&#9733;</span>
+                <span class="folder-name">Flagged</span>
+            </div>
+        </div>
+
+        <!-- Email List -->
+        <div class="email-list">
+            <div class="email-list-header">
+                Inbox &mdash; Focused
+            </div>
+            {% for email in emails %}
+            <div class="email-row {% if not email.is_read %}unread{% endif %}">
+                <div class="sender-initials color-{{ loop.index0 % 7 }}">
+                    {{ email.sender_name.split()[0][0] }}{{ email.sender_name.split()[-1][0] if email.sender_name.split()|length > 1 else '' }}
+                </div>
+                <div class="email-content">
+                    <div class="email-top-row">
+                        <span class="email-sender-name">
+                            {{ email.sender_name }}
+                            {% if email.is_negotiation %}
+                            <span class="negotiation-flag">&#9873; Negotiation</span>
+                            {% endif %}
+                        </span>
+                        <span class="email-date">
+                            {{ email.date[:10] }}
+                        </span>
+                    </div>
+                    <div class="email-subject">{{ email.subject }}</div>
+                    <div class="email-preview">{{ email.preview }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="outlook-footer">
+        Dummy Outlook &mdash; POC Demo Environment &middot; Not connected to real Microsoft 365
+    </div>
+</body>
+</html>

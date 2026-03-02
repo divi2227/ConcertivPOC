@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal - {{ ref_number }}</title>
+    <style>{{ css_content }}</style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <div class="logo">CONCERTIV</div>
+            <div class="logo-subtitle">Procurement Intelligence</div>
+        </div>
+        <div class="header-right">
+            <span class="confidential-badge">CONFIDENTIAL</span>
+        </div>
+    </div>
+
+    <div class="document-title">
+        <h1>PROPOSAL DOCUMENT</h1>
+        <p class="ref-number">Ref: {{ ref_number }}</p>
+        <p class="generated-date">Generated: {{ generated_date }}</p>
+    </div>
+
+    <!-- SECTION 1: EXECUTIVE SUMMARY -->
+    <div class="section">
+        <h2>1. Executive Summary</h2>
+        <div class="summary-box">
+            <p>{{ executive_summary }}</p>
+        </div>
+        <div class="confidence-indicator confidence-{{ confidence }}">
+            Confidence Level: <strong>{{ confidence|upper }}</strong>
+        </div>
+        {% if acceptance_signal %}
+        <div class="acceptance-signal">
+            <strong>Acceptance Signal:</strong> "{{ acceptance_signal }}"
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- SECTION 2: PARTIES & CONTACTS -->
+    <div class="section page-break-before">
+        <h2>2. Parties &amp; Contacts</h2>
+        <table class="parties-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Organization</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Client</td>
+                    <td>{{ parties.client_name or '—' }}</td>
+                    <td>{{ parties.client_contact.name if parties.client_contact else '—' }}</td>
+                    <td>{{ parties.client_contact.email if parties.client_contact else '—' }}</td>
+                </tr>
+                <tr>
+                    <td>Vendor</td>
+                    <td>{{ parties.vendor_name or '—' }}</td>
+                    <td>{{ parties.vendor_contact.name if parties.vendor_contact else '—' }}</td>
+                    <td>{{ parties.vendor_contact.email if parties.vendor_contact else '—' }}</td>
+                </tr>
+                <tr>
+                    <td>Concertiv</td>
+                    <td>Concertiv</td>
+                    <td>{{ parties.concertiv_contact.name if parties.concertiv_contact else '—' }}</td>
+                    <td>{{ parties.concertiv_contact.email if parties.concertiv_contact else '—' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 3: COMMERCIAL TERMS -->
+    <div class="section">
+        <h2>3. Commercial Terms</h2>
+        <table class="pricing-table">
+            <tbody>
+                <tr><td class="label">Unit</td><td>{{ pricing.unit or '—' }}</td></tr>
+                <tr><td class="label">Unit Price</td><td>{{ '${:,.0f}'.format(pricing.unit_price) if pricing.unit_price else '—' }}</td></tr>
+                <tr><td class="label">Quantity</td><td>{{ pricing.quantity or '—' }}</td></tr>
+                <tr><td class="label">Total Annual Value</td><td>{{ '${:,.0f}'.format(pricing.total_annual_value) if pricing.total_annual_value else '—' }}</td></tr>
+                <tr><td class="label">Total Contract Value</td><td>{{ '${:,.0f}'.format(pricing.total_contract_value) if pricing.total_contract_value else '—' }}</td></tr>
+                <tr><td class="label">Currency</td><td>{{ pricing.currency or 'USD' }}</td></tr>
+                <tr><td class="label">Price Escalation Cap</td><td>{{ pricing.price_escalation_cap or '—' }}</td></tr>
+            </tbody>
+        </table>
+
+        {% if pricing.negotiation_summary %}
+        <div class="negotiation-summary">
+            <strong>Negotiation Summary:</strong> {{ pricing.negotiation_summary }}
+        </div>
+        {% endif %}
+
+        {% if pricing.price_history %}
+        <h3>Price History</h3>
+        <table class="price-history-table">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Proposed By</th>
+                    <th>Unit Price</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in pricing.price_history %}
+                <tr>
+                    <td>{{ entry.round }}</td>
+                    <td>{{ entry.proposed_by or '—' }}</td>
+                    <td>{{ '${:,.0f}'.format(entry.unit_price) if entry.unit_price else '—' }}</td>
+                    <td>{{ entry.notes or '—' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+    <!-- SECTION 4: LICENSE & USAGE TERMS -->
+    <div class="section page-break-before">
+        <h2>4. License &amp; Usage Terms</h2>
+        <table class="details-table">
+            <tbody>
+                <tr><td class="label">Term Duration</td><td>{{ license_terms.term_years or '—' }} year(s)</td></tr>
+                <tr><td class="label">Start Date</td><td>{{ license_terms.start_date or '—' }}</td></tr>
+                <tr><td class="label">End Date</td><td>{{ license_terms.end_date or '—' }}</td></tr>
+                <tr><td class="label">Seat Count</td><td>{{ license_terms.seat_count or '—' }}</td></tr>
+                <tr><td class="label">Usage Type</td><td>{{ license_terms.usage_type or '—' }}</td></tr>
+                <tr><td class="label">Renewal Type</td><td>{{ license_terms.renewal_type or 'Not specified' }}</td></tr>
+            </tbody>
+        </table>
+        {% if license_terms.usage_restrictions %}
+        <div class="restrictions">
+            <strong>Usage Restrictions:</strong>
+            <ul>
+                {% for r in license_terms.usage_restrictions %}
+                <li>{{ r }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- SECTION 5: SCOPE OF SERVICES -->
+    <div class="section">
+        <h2>5. Scope of Services</h2>
+        <table class="details-table">
+            <tbody>
+                <tr><td class="label">Product</td><td>{{ product.name or '—' }}</td></tr>
+                <tr><td class="label">Description</td><td>{{ product.description or '—' }}</td></tr>
+            </tbody>
+        </table>
+        {% if product.inclusions %}
+        <h3>Inclusions</h3>
+        <ul>
+            {% for item in product.inclusions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if product.exclusions %}
+        <h3>Exclusions</h3>
+        <ul>
+            {% for item in product.exclusions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    <!-- SECTION 6: SLA & SUPPORT TERMS -->
+    <div class="section">
+        <h2>6. SLA &amp; Support Terms</h2>
+        <table class="details-table">
+            <tbody>
+                <tr><td class="label">Uptime Commitment</td><td>{{ sla_terms.uptime_commitment or '—' }}</td></tr>
+                <tr><td class="label">Support Tier</td><td>{{ sla_terms.support_tier or '—' }}</td></tr>
+            </tbody>
+        </table>
+        {% if sla_terms.notes %}
+        <p class="sla-notes"><strong>Notes:</strong> {{ sla_terms.notes }}</p>
+        {% endif %}
+    </div>
+
+    <!-- SECTION 7: SPECIAL CONDITIONS -->
+    {% if special_conditions %}
+    <div class="section">
+        <h2>7. Special Conditions</h2>
+        <ul class="conditions-list">
+            {% for condition in special_conditions %}
+            <li>{{ condition }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- SECTION 8: EFFECTIVE DATES -->
+    <div class="section page-break-before">
+        <h2>8. Effective Dates</h2>
+        <table class="details-table">
+            <tbody>
+                <tr><td class="label">Effective Start</td><td>{{ license_terms.start_date or 'To be determined' }}</td></tr>
+                <tr><td class="label">Effective End</td><td>{{ license_terms.end_date or 'To be determined' }}</td></tr>
+                <tr><td class="label">Signature Required By</td><td>Prior to {{ license_terms.start_date or 'start date' }}</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 9: AMBIGUITIES & OPEN ITEMS (conditional) -->
+    {% if ambiguities %}
+    <div class="section ambiguities-section">
+        <h2>9. Ambiguities &amp; Open Items</h2>
+        <div class="amber-warning">
+            <div class="warning-icon">&#9888;</div>
+            <div class="warning-content">
+                <p><strong>The following items require clarification before this proposal can be finalized:</strong></p>
+                <ul>
+                    {% for item in ambiguities %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- SIGNATURE BLOCKS -->
+    <div class="section page-break-before signatures">
+        <h2>Signatures</h2>
+        <div class="signature-grid">
+            <div class="signature-block">
+                <p class="sig-role">Client: {{ parties.client_name or '________' }}</p>
+                <div class="sig-line"></div>
+                <p class="sig-name">{{ parties.client_contact.name if parties.client_contact else '________' }}</p>
+                <p class="sig-date">Date: ________________</p>
+            </div>
+            <div class="signature-block">
+                <p class="sig-role">Vendor: {{ parties.vendor_name or '________' }}</p>
+                <div class="sig-line"></div>
+                <p class="sig-name">{{ parties.vendor_contact.name if parties.vendor_contact else '________' }}</p>
+                <p class="sig-date">Date: ________________</p>
+            </div>
+            <div class="signature-block">
+                <p class="sig-role">Concertiv</p>
+                <div class="sig-line"></div>
+                <p class="sig-name">{{ parties.concertiv_contact.name if parties.concertiv_contact else '________' }}</p>
+                <p class="sig-date">Date: ________________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>This document is confidential and intended solely for the parties named herein.</p>
+        <p>Generated by Concertiv Proposal Intelligence System | {{ generated_date }}</p>
+    </div>
+</body>
+</html>

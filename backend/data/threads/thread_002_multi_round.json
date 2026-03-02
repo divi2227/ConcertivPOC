@@ -1,0 +1,130 @@
+{
+  "conversation_id": "thread_002",
+  "subject": "Refinitiv Eikon Data Feed - Meridian Asset Management",
+  "participants": [
+    {"name": "David Park", "email": "david.park@meridianam.com", "role": "client"},
+    {"name": "Lisa Wong", "email": "lisa.wong@meridianam.com", "role": "client"},
+    {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com", "role": "vendor"},
+    {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com", "role": "vendor"},
+    {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com", "role": "concertiv"}
+  ],
+  "messages": [
+    {
+      "message_id": "msg-001",
+      "from": {"name": "David Park", "email": "david.park@meridianam.com"},
+      "to": [{"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-03T10:00:00Z",
+      "subject": "Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Priya,\n\nWe're evaluating market data providers and are interested in deploying Refinitiv Eikon across our research and trading teams. We'd need approximately 25 user licenses for the full data feed package. Can you reach out to Refinitiv and get us a quote? We're looking to have this in place by Q2.\n\nThanks,\nDavid Park\nCOO, Meridian Asset Management"
+    },
+    {
+      "message_id": "msg-002",
+      "from": {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"},
+      "to": [{"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [{"name": "David Park", "email": "david.park@meridianam.com"}],
+      "timestamp": "2025-02-03T14:20:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Rachel,\n\nI'm writing on behalf of Meridian Asset Management, who are looking to onboard Refinitiv Eikon for 25 users. They need the full data feed package including real-time and historical market data. Meridian is a mid-size asset manager with a strong growth trajectory, so this could be a valuable long-term partnership.\n\nCould you share enterprise pricing and available commitment options?\n\nBest,\nPriya Sharma\nVendor Relations\nConcertiv"
+    },
+    {
+      "message_id": "msg-003",
+      "from": {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"},
+      "to": [{"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "cc": [{"name": "David Park", "email": "david.park@meridianam.com"}],
+      "timestamp": "2025-02-04T11:30:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Priya,\n\nThank you for the introduction. For 25 users on the enterprise tier, our standard pricing is $15,000 per seat annually on a 3-year commitment. This includes real-time streaming data, historical data access, and our full analytics suite. We also offer onboarding and training support at no additional cost.\n\nHappy to schedule a demo if Meridian is interested.\n\nBest regards,\nRachel Adams\nSenior Sales Manager\nRefinitiv"
+    },
+    {
+      "message_id": "msg-004",
+      "from": {"name": "David Park", "email": "david.park@meridianam.com"},
+      "to": [{"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}, {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-05T09:15:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Rachel, Priya,\n\nAppreciate the proposal. Candidly, $15,000 per seat is above our budget for this deployment. We've seen comparable offerings in the $12,000 range and would need to be closer to that figure to make this work. We're flexible on commitment length but the per-seat cost is the primary concern.\n\nCan you revisit the pricing?\n\nThanks,\nDavid"
+    },
+    {
+      "message_id": "msg-005",
+      "from": {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"},
+      "to": [{"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "cc": [],
+      "timestamp": "2025-02-06T10:00:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi David,\n\nI understand budget constraints are a priority. After reviewing internally, we can offer $14,000 per seat with a 2-year commitment instead of the standard 3-year. This gives you more flexibility on term length while still providing a meaningful discount. The enterprise tier features remain unchanged.\n\nLet me know if this is closer to what works for Meridian.\n\nBest,\nRachel"
+    },
+    {
+      "message_id": "msg-006",
+      "from": {"name": "David Park", "email": "david.park@meridianam.com"},
+      "to": [{"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}, {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}],
+      "timestamp": "2025-02-07T08:45:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi all,\n\nWe're getting closer on pricing. Before we go further, I'm looping in Lisa Wong, our CTO, who has some questions around service-level guarantees and technical support. Lisa — Rachel and Priya have been working on Refinitiv Eikon pricing for our 25-user deployment. Can you weigh in on the SLA and support requirements?\n\nThanks,\nDavid"
+    },
+    {
+      "message_id": "msg-007",
+      "from": {"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"},
+      "to": [{"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [{"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "timestamp": "2025-02-07T13:30:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Rachel,\n\nThanks for the context, David. Rachel, our trading desk operates across US and European hours, so uptime is critical. What SLA commitments does Refinitiv offer on the Eikon platform? We'd also need clarity on support response times for P1 incidents and whether we'd have a dedicated technical contact.\n\nRegards,\nLisa Wong\nCTO, Meridian Asset Management"
+    },
+    {
+      "message_id": "msg-008",
+      "from": {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"},
+      "to": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}],
+      "cc": [{"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}, {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"}],
+      "timestamp": "2025-02-10T09:00:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Lisa,\n\nGreat questions. I'm bringing in Tom Bailey from our technical services team to speak to the SLA specifics. Tom has deep experience with deployments similar to yours and can address your infrastructure and support requirements directly.\n\nTom, can you provide Lisa with details on our uptime commitments and premium support tiers?\n\nThanks,\nRachel"
+    },
+    {
+      "message_id": "msg-009",
+      "from": {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"},
+      "to": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}],
+      "cc": [{"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}, {"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "timestamp": "2025-02-10T14:15:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Lisa,\n\nFor the enterprise tier at 25 seats, we offer a 99.5% uptime SLA measured monthly across all data feed services. Our premium support tier includes 15-minute response times for P1 incidents during market hours and 1-hour response times for P2. You'd also have access to our 24/5 global support desk covering US and European trading sessions.\n\nHappy to walk through the technical architecture if helpful.\n\nBest,\nTom Bailey\nTechnical Services Director\nRefinitiv"
+    },
+    {
+      "message_id": "msg-010",
+      "from": {"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"},
+      "to": [{"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"}],
+      "cc": [{"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}, {"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "timestamp": "2025-02-11T10:30:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Tom,\n\nThe support coverage sounds solid, but 99.5% uptime gives us roughly 3.6 hours of allowable downtime per month, which is a concern during peak trading. Is there any way to get to 99.9%? We've had issues with data outages at our current provider and reliability is a top priority for this switch.\n\nThanks,\nLisa"
+    },
+    {
+      "message_id": "msg-011",
+      "from": {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"},
+      "to": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}, {"name": "David Park", "email": "david.park@meridianam.com"}],
+      "cc": [{"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}, {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}],
+      "timestamp": "2025-02-12T09:45:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Lisa,\n\nI understand the concern. Unfortunately, 99.5% is the highest SLA we can contractually commit to for the Eikon platform at this tier — the 99.9% commitment is reserved for our co-located infrastructure clients. However, I can tell you our actual measured uptime has been above 99.9% for the past 18 months. Additionally, we'd assign a dedicated account manager to Meridian to ensure priority handling of any service issues.\n\nI believe this provides the reliability assurance you're looking for, even if the contractual floor is 99.5%.\n\nBest,\nTom"
+    },
+    {
+      "message_id": "msg-012",
+      "from": {"name": "David Park", "email": "david.park@meridianam.com"},
+      "to": [{"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"}, {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}, {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"}],
+      "timestamp": "2025-02-13T08:30:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi Priya, Rachel,\n\nThanks everyone for working through the details. Lisa and I have discussed internally and we're comfortable with the 99.5% SLA given the actual uptime track record and the dedicated account manager. On pricing, we'd like to meet in the middle at $13,500 per seat for 25 seats on a 2-year commitment with premium support included.\n\nIf Refinitiv can confirm those terms, we're ready to move forward.\n\nBest,\nDavid Park\nCOO, Meridian Asset Management"
+    },
+    {
+      "message_id": "msg-013",
+      "from": {"name": "Priya Sharma", "email": "priya.sharma@concertiv.com"},
+      "to": [{"name": "David Park", "email": "david.park@meridianam.com"}, {"name": "Rachel Adams", "email": "rachel.adams@refinitiv.com"}],
+      "cc": [{"name": "Lisa Wong", "email": "lisa.wong@meridianam.com"}, {"name": "Tom Bailey", "email": "tom.bailey@refinitiv.com"}],
+      "timestamp": "2025-02-13T11:00:00Z",
+      "subject": "Re: Refinitiv Eikon Data Feed - Meridian Asset Management",
+      "body": "Hi David, Rachel,\n\nGreat to see alignment from both sides. To confirm what I'm hearing: $13,500 per seat, 25 seats, 2-year term, enterprise tier with premium support and 99.5% uptime SLA, plus a dedicated account manager. Rachel, if Refinitiv is good with this, let's get the paperwork started so we can target a Q2 deployment.\n\nThanks,\nPriya Sharma\nVendor Relations\nConcertiv"
+    }
+  ]
+}
